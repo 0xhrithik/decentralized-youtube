@@ -9,16 +9,12 @@ module.exports = {
       port: 9545,
       network_id: "*" // Match any network id
     },
-    ropsten: {
-      provider: function () {
-        return new HDWalletProvider(
-          process.env.MNEMONIC,
-          `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`
-        );
-      },
+    polygonMumbai: {
+      url: "https://matic-mumbai.chainstacklabs.com",
+      timeout: 100000000,
       gas: 5000000,
       gasPrice: 25000000000,
-      network_id: 3,
+      network_id: 80001,
     },
   },
   contracts_directory: "./src/contracts/",
